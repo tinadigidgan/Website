@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christina <Porfolio id="header"></Porfolio></title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ce252646d1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Risk Management <br>and Compliance Senior Analyst</p>
+                <h1>Hi, I'm <span>Christina</span> </h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------------------------about---------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>If you're looking for a dedicated and results-driven 
+                        risk management and compliance officer who can help 
+                        your company navigate complex regulatory environments 
+                        and mitigate potential risks, I would love to explore 
+                        how my skills and experience can benefit your organization. 
+                        Let's connect and discuss how I can contribute to your team!</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('certifcation')">Certification</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Government compliance</span><br></li>
+                            <li><span>Consumer complaints</span><br></li>
+                            <li><span>Risk assessment and management</span><br></li>
+                            <li><span>Stakeholder coordination</span><br></li>
+                            <li><span>Intellectual Property Rights</span><br></li>
+                            <li><span>DTI Regulations</span><br></li>
+                            <li><span>Fraud detection and evaluation</span><br></li>
+                            <li><span>Conflict resolution</span><br></li>
+                            <li><span>Project management</span><br></li>
+                            <li><span>Process improvement</span><br></li>
+                            <li><span>Research and analysis</span><br></li>
+                            <li><span>Data quality assessment and improvement</span><br></li>
+                            <li><span>Communication and collaboration</span><br></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>April 2020-February 2023</span><br>Risk Management and Compliance Senior Analyst<br>Shopee Philippines Inc.</li>
+                            <li><span>July 2019–March 2020</span><br>Corporate Governance Research Associate<br>Integreon Managed Solutions Inc.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>June 2015 – May 2019</span><br>Bachelor of Arts in Communication Research<br>Polytechnic University of the Philippines (Sta. Mesa, Manila)</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="certifcation">
+                        <ul>
+                            <li><span>Project Management 101</span><br>MST Connect Educational Consultancy<br>March 2023</li>
+                            <li><span>Lean Six Sigma Yellow Belt</span><br>Nievgen Training and Assessment LLC<br>December 2022</li>
+                            <li><span>Professional Civil Service passer</span><br>Civil Service Commission<br>August 2019</li>
+                            <li><span>Events Service and Management NC III</span><br>Araya Skill Development<br>August 19, 2019</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------------------contact-------------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>digdiganchristina@gmail.com</p>
+                    <p><i class="fa-solid fa-phone-volume"></i>(+63)998577449</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/christina-digdigan-72345a188/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="CV/Resume.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p> © Christina Digdigan</p>
+        </div>
+    </div>
+    
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tacontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tacontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+            
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyTr1E3ovSNzdN9tuZuqCGVjB0dsU2Ix8_nsQPyqF6uIFuYRbDGdq_CDbtC-wcoSm9Q0g/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully!"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
